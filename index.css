@@ -8,10 +8,46 @@
 
 /* Elements alpahbetized */
 
-main {
-
+body {
+    
 }
 
+header {
+    align-items: center;
+    background: hsla(0, 0%, 65%, 0.5);
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    
+}
+
+main {
+    background: hsla(0, 0%, 65%, 0.5);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+}
 /* Classes alpahbetized */
 
+.foot {
+    align-items: center;
+    background: hsla(0, 0%, 65%, 0.5);
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+}
+
 /* Ids alpahbetized */
+
+#intro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
