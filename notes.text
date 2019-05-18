@@ -23,4 +23,17 @@ Questions & Answers(10):
         - They kill you.
 
 
+App Must: 
+    1. Starting screen must have a button that when clicked starts the quiz.
+    2. User must be prompted through at least 5 multiple answer questions.
+        - Must do 1 question after the other.
+        - Should only show 1 question at a time.
+    3. Cannot skip questions
+    4. Should display which question user is on and their score.
+    5. When submitting the answer:
+        - user should get textual feedback if wrong or right 
+        - user should be told correct answer.
+        - include "next question" button? 
+    6. User should be shown total score at the end.
+    7. Be able to re-start the quiz. 
 
