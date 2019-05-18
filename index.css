@@ -16,7 +16,12 @@ button {
     font-size: 20px;
     padding: 3px;
     margin: 10px;
-    margin-top: 30px;
+    
+}
+
+form {
+    padding: 20px;
+    font-size: 30px;
 }
 
 h5 {
@@ -42,6 +47,11 @@ main {
     padding: 10px;
     margin: 20px;
 }
+
+ul {
+    list-style-type: none;
+}
+
 /* Classes alpahbetized */
 
 .banner {
@@ -49,8 +59,11 @@ main {
     padding: 20px;
 }
 
-.container {
+.choice {
     font-size: 20px;
+}
+
+.container {
     padding: 20px;
 }
 
@@ -65,8 +78,14 @@ main {
     padding: 10px;
 }
 
-ul {
-    list-style-type: none;
+.subContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 40px;
 }
 
 .track {
@@ -74,15 +93,7 @@ ul {
     font-size: 40px;
 }
 
-
-
 /* Ids alpahbetized */
-
-#intro {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
 
 @media screen and (min-width: 600px) {
     .tracking {
