@@ -10,7 +10,6 @@ function handleBegin() {
         $(".intro").remove();
         $("#questNumb").text(1);
         console.log('`handleBegin` ran');
-        
         renderQuestion();
     });
 }
@@ -145,16 +144,28 @@ function handleFinish() {
     $('.container').append(finishSection);
     $('#questNumb').text(QUESTIONS.length); // Should prevent from displaying more questions than there are. 
     console.log('`handleFinish` ran and is now showing the final score.');
+    hanldeRestart();
 }
 
 function hanldeRestart() {
     // function to handle when quiz is over and user wants to click button to restart the quiz. 
     $('#restart').click(function(event){
         event.preventDefault();
+        removeSubContainer();
         score = 0;
         questionIndex = 0;
-        questionDisplay = 0;
-        
+        questionDisplay = 1;
+        $('#score').text(score);
+        $('#questNumb').text(0);
+        console.log('restart button pressed, score and questionIndex to 0, and questionDisplay reset to 1.');
+        let introSection = `<section class="subContainer intro">
+        <h2 class="title">Test your Zelda OoT knowledge of the legend here!</h2>
+        <button id="begin">Begin!</button>
+        </section>
+        <section class="question subContainer"></section>`;
+        $('.container').append(introSection);
+        console.log('`handleRestart` has run and re-inserted the intro content with the begin button. Ready to play!');
+        handleBegin();
 
     })
 }
