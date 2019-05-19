@@ -17,7 +17,7 @@ function handleBegin() {
 
 function renderQuestion() {
     // This function will be responsible for rendering the question and adding it to the "question" class section
-    if (questionIndex < QUESTIONS.length - 1) {
+    if (questionIndex < QUESTIONS.length) {
         let newSection = `<section class="question">
         <h2 class="title">${QUESTIONS[questionIndex].question}</h2>
         <form>
@@ -57,10 +57,10 @@ function handleAnswer() {
     
     if (selectedAnswer === QUESTIONS[questionIndex].correct){
         console.log('A matching answer was found with the value of ' + selectedAnswer);
-        console.log('`handleAnswer` ran');
+        console.log('`handleAnswer` ran and the answer was correct!');
         handleCorrect();
     } else {
-        console.log('`handleAnswer` ran');
+        console.log('`handleAnswer` ran and the answer was wrong!');
         handleWrong();
     }
 }
@@ -88,9 +88,9 @@ function handleCorrect() {
 
 function handleWrong() {
     // function responsible for showing the user they selected the wrong anser.
+    console.log('`handleWrong` ran');
     displayWrong();
     handleNext();
-    console.log('`handleWrong` and `handleNext` ran');
 }
 
 function displayWrong() {
@@ -122,10 +122,10 @@ function handleNext(){
         event.preventDefault();
         hanldeQuestNav();
         $('.subContainer').remove();
-        renderQuestion();
         removeSubContainer();
-
-    console.log('`handleNext` ran');
+        renderQuestion();
+        
+        console.log('`handleNext` ran');
     });
 
 }
@@ -139,15 +139,24 @@ function removeSubContainer() {
 function handleFinish() {
     // function hanldes when there are no more questions in the QUESTIONS array.
     let finishSection = `<section class="subContainer">
-    <h2 class="title">Congratulations! You've gained a heart for your wisdom!</h2>
+    <h2 class="title">Congratulations! You have finished your quest! You gained ${score}</h2>
     <button id="restart">Restart!</button>
     </section>`;
     $('.container').append(finishSection);
-    console.log('`handleFinish` ran');
+    $('#questNumb').text(QUESTIONS.length); // Should prevent from displaying more questions than there are. 
+    console.log('`handleFinish` ran and is now showing the final score.');
 }
 
 function hanldeRestart() {
     // function to handle when quiz is over and user wants to click button to restart the quiz. 
+    $('#restart').click(function(event){
+        event.preventDefault();
+        score = 0;
+        questionIndex = 0;
+        questionDisplay = 0;
+        
+
+    })
 }
 
 
