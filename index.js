@@ -15,15 +15,17 @@ function handleBegin() {
 
 function renderQuestion() {
     // This function will be responsible for rendering the question and adding it to the "question" class section
-    let newSection = `<h2 class="title">${QUESTIONS[questionIndex].question}</h2>
+    let newSection = `<section class="question">
+        <h2 class="title">${QUESTIONS[questionIndex].question}</h2>
         <form>
             <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[0]}" required>${QUESTIONS[questionIndex].answers[0]}<br>
             <input type="radio" class="choice" name="choice" required>${QUESTIONS[questionIndex].answers[1]}<br>
             <input type="radio" class="choice" name="choice" required>${QUESTIONS[questionIndex].answers[2]}<br>
             <input type="radio" class="choice" name="choice" required> ${QUESTIONS[questionIndex].answers[3]}<br>
             <button id="submitIt">Submit!</button>
-        </form>`;
-    $('.question').append(newSection);
+        </form>
+    </section>`;
+    $('.container').append(newSection);
     console.log('`renderQuestion` ran');
     handleSubmit();
     
@@ -34,9 +36,9 @@ function handleSubmit() {
     $('#submitIt').click(function(event) {
         event.preventDefault();
         handleAnswer();
-        $(".question").remove();
+        // removeSubContainer();
         hanldeQuestNav(); // May want to move
-        
+        $('.question').remove();
     });    
     console.log('`handleSubmit` ran');
 }
@@ -51,11 +53,6 @@ function handleAnswer() {
         handleWrong();
     }
     console.log('`handleAnswer` ran');
-}
-
-function hanldeScore() {
-    // function responsible for updating the score each time a correct answer is selected.
-    console.log('`handleScore` ran');
 }
 
 function hanldeQuestNav() {
@@ -86,16 +83,19 @@ function handleWrong() {
     <h4>${QUESTIONS[questionIndex].correct}<h4>`;
     $('.container').append(wrongDisplay);
     console.log('`handleWrong` ran');
+    handleNext();
     
 }
 
 function displayCorrect(){
-    // function displays the correct answer if the user picked the wrong answer. 
+    // function displays the correct answer if the user picked the correct answer. 
     let correctDisplay = `<section class="subContainer">
     <h2 class="title">Congratulations! You've gained a heart for your wisdom!</h2>
     <button id="next">Next!</button>
     </section>`;
     $('.container').append(correctDisplay);
+    console.log('`displayCorrect` ran');
+    handleNext();
 }
 
 function handleNext(){
@@ -105,11 +105,17 @@ function handleNext(){
         $('.subContainer').remove();
         hanldeQuestNav();
         renderQuestion();
+        removeSubContainer();
     });
 
     console.log('`handleNext` ran');
 }
 
+function removeSubContainer() {
+    // responsible for removing any element with a class of subContainer
+    $('.subContainer').remove();
+    console.log('`removeSubContainer` ran');
+}
 
 function hanldeRestart() {
     // function to handle when quiz is over and user wants to click button to restart the quiz. 
@@ -120,7 +126,7 @@ function hanldeRestart() {
 function allMother() {
     // function stores all other function calls.
     handleBegin();
-    handleNext();
+    
 }
 
 allMother();
