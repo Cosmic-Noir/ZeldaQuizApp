@@ -7,7 +7,8 @@ let QUESTIONS = [
             "The Princess of Hyrule.",
             "The young hero dressed in green.",
             "The fairy queen.",
-            "The evil demon king."]
+            "The evil demon king."],
+        correct: "The Princess of Hyrule."
     }, 
     {
         question: "When was Ocarina of Time originally released?",
@@ -15,7 +16,8 @@ let QUESTIONS = [
             "November, 1998.",
             "Octorber, 1993.",
             "December, 1999.",
-            "December, 2003."]
+            "December, 2003."],
+        correct: "November, 1998."
     },
     {
         question: "What console was the title released on?",
@@ -23,7 +25,8 @@ let QUESTIONS = [
             "Nintendo 64.",
             "playstaion.",
             "Super Nintendo.",
-            "Dreamcast."]
+            "Dreamcast."],
+        correct: "Nintendo 64."
     },
     {
         question: "What is the name of the main character?",
@@ -32,7 +35,8 @@ let QUESTIONS = [
             "Zelda.",
             "Saori.",
             "Epona."
-        ]
+        ],
+        correct: "Link."
     },
     {
         question: "What is the name of hero's fairy?",
@@ -41,6 +45,7 @@ let QUESTIONS = [
             "Epona.",
             "Theo.",
             "Malta."
-        ]
+        ],
+        correct: "Navi."
     }
 ]

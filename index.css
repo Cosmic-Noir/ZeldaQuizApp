@@ -78,6 +78,10 @@ ul {
     padding: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 .subContainer {
     display: flex;
     align-items: center;
