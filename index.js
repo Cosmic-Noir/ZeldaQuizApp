@@ -21,9 +21,9 @@ function renderQuestion() {
         <h2 class="title">${QUESTIONS[questionIndex].question}</h2>
         <form>
             <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[0]}" required>${QUESTIONS[questionIndex].answers[0]}<br>
-            <input type="radio" class="choice" name="choice" required>${QUESTIONS[questionIndex].answers[1]}<br>
-            <input type="radio" class="choice" name="choice" required>${QUESTIONS[questionIndex].answers[2]}<br>
-            <input type="radio" class="choice" name="choice" required> ${QUESTIONS[questionIndex].answers[3]}<br>
+            <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[1]}" required>${QUESTIONS[questionIndex].answers[1]}<br>
+            <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[2]}"  required>${QUESTIONS[questionIndex].answers[2]}<br>
+            <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[3]}"  required> ${QUESTIONS[questionIndex].answers[3]}<br>
             <button id="submitIt">Submit!</button>
         </form>
     </section>`;
@@ -53,7 +53,7 @@ function handleSubmit() {
 function handleAnswer() {
     // this function is responsible for deciding if the selected answer value is equal to the correct answer. 
     let selectedAnswer = $('input[name="choice"]:checked').val();
-    
+    console.log('selectedAnswer is ' + selectedAnswer);
     if (selectedAnswer === QUESTIONS[questionIndex].correct){
         console.log('A matching answer was found with the value of ' + selectedAnswer);
         console.log('`handleAnswer` ran and the answer was correct!');

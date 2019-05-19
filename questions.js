@@ -2,10 +2,10 @@
 
 let QUESTIONS = [
     {
-        question: "Who is Zleda?",
+        question: "Who is Zelda?",
         answers: [
-            "The Princess of Hyrule.",
             "The young hero dressed in green.",
+            "The Princess of Hyrule.",
             "The fairy queen.",
             "The evil demon king."],
         correct: "The Princess of Hyrule."
@@ -13,9 +13,9 @@ let QUESTIONS = [
     {
         question: "When was Ocarina of Time originally released?",
         answers: [
-            "November, 1998.",
-            "Octorber, 1993.",
+            "October, 1993.",
             "December, 1999.",
+            "November, 1998.",
             "December, 2003."],
         correct: "November, 1998."
     },
@@ -31,10 +31,10 @@ let QUESTIONS = [
     {
         question: "What is the name of the main character?",
         answers: [
-            "Link.",
             "Zelda.",
             "Saori.",
-            "Epona."
+            "Epona.",
+            "Link."
         ],
         correct: "Link."
     },
