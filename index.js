@@ -17,7 +17,7 @@ function handleBegin() {
 
 function renderQuestion() {
     // This function will be responsible for rendering the question and adding it to the "question" class section
-    if (questionIndex < QUESTIONS.length) {
+    if (questionIndex < QUESTIONS.length - 1) {
         let newSection = `<section class="question">
         <h2 class="title">${QUESTIONS[questionIndex].question}</h2>
         <form>
@@ -88,8 +88,9 @@ function handleCorrect() {
 
 function handleWrong() {
     // function responsible for showing the user they selected the wrong anser.
+    displayWrong();
     handleNext();
-    console.log('`handleWrong` ran');
+    console.log('`handleWrong` and `handleNext` ran');
 }
 
 function displayWrong() {
@@ -101,7 +102,7 @@ function displayWrong() {
     </section>`;
     
     $('.container').append(wrongDisplay);
-    console.log('`displayWrong` ran');
+    console.log('`displayWrong` ran and is showing the correct answer.');
 }
 
 function displayCorrect(){
@@ -142,6 +143,7 @@ function handleFinish() {
     <button id="restart">Restart!</button>
     </section>`;
     $('.container').append(finishSection);
+    console.log('`handleFinish` ran');
 }
 
 function hanldeRestart() {
