@@ -17,10 +17,11 @@ body {
 }
 
 button {
+    background-color: hsla(29, 91%, 50%, 0.9);
     font-size: 20px;
-    padding: 3px;
+    padding: 10px;
     margin: 10px;
-    
+    border-radius: 20px;
 }
 
 form {
@@ -81,7 +82,7 @@ ul {
 
 .styled {
     background: hsla(51, 65%, 65%, 0.623);
-    
+    box-shadow: 4px 4px hsla(50, 34%, 87%, 0.65);
     border-radius: 15px;
 }
 
@@ -106,7 +107,7 @@ ul {
 
 .track {
     padding: 10px;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .triforce {

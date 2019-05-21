@@ -47,5 +47,55 @@ let QUESTIONS = [
             "Malta."
         ],
         correct: "Navi."
+    },
+    {
+        question: "What is the name of ther hero's horse?",
+        answers: [
+            "Saria",
+            "Ted",
+            "Epona",
+            "Malon"
+        ],
+        correct: "Epona."
+    },
+    {
+        question: "What is the blade weilded by the hero?",
+        answers: [
+            "Eternity's Edge",
+            "The Sword of Time",
+            "Demon's Bane",
+            "The Master Blade"
+        ],
+        correct: "The Master Blade"
+    },
+    {
+        question: "What is the name of the main villain?",
+        answers: [
+            "Ganondorf",
+            "The Great Fairy",
+            "Pierre",
+            "Kaepora Gaebora"
+        ],
+        correct: "Ganondorf"
+    },
+    {
+        question: "Who is Sheik?",
+        answers: [
+            "The Prince of Hyrule",
+            "The Keeper of Time",
+            "Princess Zelda",
+            "King Ganondorf's son"
+        ],
+        correct: "Princess Zelda"
+    },
+    {
+        question: "What happens when you attack the chickens?",
+        answers: [
+            "They lay eggs",
+            "They drop chicken sticks",
+            "They kill you",
+            "You gain the powers of a chicken for 2 minutes"
+        ],
+        correct: "They kill you"
     }
 ]
