@@ -97,6 +97,11 @@ ul {
     padding: 10px;
 }
 
+.heart {
+    height: 25px;
+    width: 25px;
+}
+
 .perfect {
     height: 300px;
     width: 300px;
@@ -140,6 +145,7 @@ ul {
 .triforce {
     height: 150px;
     width: 200px;
+    padding: 5px;
 }
 
 .question {

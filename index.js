@@ -79,7 +79,8 @@ function hanldeQuestNav() {
 function handleCorrect() {
     // function responsible for showing the user selected the correct answer.
     score++;
-    $('#score').text(score);
+    let heartScore = `<img src="images/heart.png" class="heart">`; 
+    $('#score').append(heartScore);
     console.log('`handleCorrect` ran and the score is now ' + score);
     displayCorrect();
     
@@ -160,7 +161,6 @@ function hanldeRestart() {
         score = 0;
         questionIndex = 0;
         questionDisplay = 1;
-        $('#score').text(score);
         $('#questNumb').text(0);
         console.log('restart button pressed, score and questionIndex to 0, and questionDisplay reset to 1.');
         let introSection = `<section class="subContainer intro">
@@ -218,7 +218,7 @@ function normScore() {
     // Responsible for display a normal reward screen for scores 4-7
     let normFinish = `<section class="subContainer">
     <h2 class="title">Congratulations! You have finished your quest! You have earned ${score} hearts!</h2>
-    <br><img class="tryTheForce" src="images/.jpg">
+    <br><img class="tryTheForce" src="images/zelda1.gif">
     <button id="restart">Restart!</button>
     </section>`;
     $('.container').append(normFinish);
