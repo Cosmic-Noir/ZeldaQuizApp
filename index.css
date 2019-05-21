@@ -34,9 +34,6 @@ h5 {
 
 header {
     align-items: center;
-    background: hsla(0, 0%, 65%, 0.5);
-    border: 1px solid black;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -84,7 +81,7 @@ ul {
 
 .styled {
     background: hsla(51, 65%, 65%, 0.623);
-    border: 2px solid rgb(230, 110, 11);
+    
     border-radius: 15px;
 }
 
@@ -94,8 +91,17 @@ ul {
     flex-direction: column;
 }
 
+.subTitle {
+    color: hsla(234, 91%, 50%, 0.9);
+    text-shadow: 1px 1px 2px black;
+    font-size: 40px;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
 .title {
     font-size: 40px;
+    text-shadow: 1px 1px 2px white;
 }
 
 .track {
@@ -104,7 +110,7 @@ ul {
 }
 
 .triforce {
-    height: 175px;
+    height: 150px;
     width: 200px;
 }
 
@@ -116,7 +122,7 @@ ul {
 
 /* Ids alpahbetized */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     .tracking {
         display: flex;
         flex-direction: row;
