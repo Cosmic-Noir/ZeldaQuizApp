@@ -9,7 +9,11 @@
 /* Elements alpahbetized */
 
 body {
-    
+    background-image: url("images/linkBack.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Cinzel";
+    text-align: center;
 }
 
 button {
@@ -41,11 +45,7 @@ header {
 }
 
 main {
-    background: hsla(0, 0%, 65%, 0.5);
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 20px;
+    
 }
 
 ul {
@@ -55,8 +55,11 @@ ul {
 /* Classes alpahbetized */
 
 .banner {
+    color: hsla(0, 91%, 50%, 0.9);
+    text-shadow: 1px 1px 2px black;
     font-size: 50px;
     padding: 20px;
+    padding-bottom: 0px;
 }
 
 .choice {
@@ -64,6 +67,7 @@ ul {
 }
 
 .container {
+    margin: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -72,13 +76,16 @@ ul {
 
 .foot {
     align-items: center;
-    background: hsla(0, 0%, 65%, 0.5);
-    border: 1px solid black;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
     margin: 20px;
     padding: 10px;
+}
+
+.styled {
+    background: hsla(51, 65%, 65%, 0.623);
+    border: 2px solid rgb(230, 110, 11);
+    border-radius: 15px;
 }
 
 .subContainer {
@@ -94,6 +101,11 @@ ul {
 .track {
     padding: 10px;
     font-size: 40px;
+}
+
+.triforce {
+    height: 175px;
+    width: 200px;
 }
 
 .question {
