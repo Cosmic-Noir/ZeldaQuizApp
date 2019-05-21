@@ -141,14 +141,15 @@ function removeSubContainer() {
 
 function handleFinish() {
     // function hanldes when there are no more questions in the QUESTIONS array.
-    let finishSection = `<section class="subContainer">
-    <h2 class="title">Congratulations! You have finished your quest! You gained ${score}</h2>
-    <button id="restart">Restart!</button>
-    </section>`;
-    $('.container').append(finishSection);
-    $('#questNumb').text(QUESTIONS.length); // Should prevent from displaying more questions than there are. 
-    console.log('`handleFinish` ran and is now showing the final score.');
-    hanldeRestart();
+    if (score === 10) {
+        perfectScore();
+    } else if (score > 7) {
+        betterScore();
+    } else if (score > 3) {
+        normScore();
+    } else {
+        badScore();
+    }
 }
 
 function hanldeRestart() {
@@ -164,6 +165,7 @@ function hanldeRestart() {
         console.log('restart button pressed, score and questionIndex to 0, and questionDisplay reset to 1.');
         let introSection = `<section class="subContainer intro">
         <h2 class="title">Test your Zelda OoT knowledge of the legend here!</h2>
+        <img src="images/link2.gif" class="plusHeart">
         <button id="begin">Begin!</button>
         </section>
         <section class="question subContainer"></section>`;
@@ -186,10 +188,43 @@ function displayChicken() {
 
 function perfectScore() {
     // Responsible for displaying screen for perfect score
+    let betterFinish = `<section class="subContainer">
+    <h2 class="title">You earned the Triforce! Congratulations on your pefect score! You have earned ${score} hearts!</h2>
+    <br><img class="perfect" src="images/triforce.gif">
+    <button id="restart">Restart!</button>
+    </section>`;
+    $('.container').append(betterFinish);
+    $('#questNumb').text(QUESTIONS.length); // Should prevent from displaying more questions than there are. 
+    console.log('`perfectScore` ran and is now showing the final score.');
+    hanldeRestart();
+
+}
+
+
+function betterScore() {
+    // Responsible for displaying screen for better score
+    let betterFinish = `<section class="subContainer">
+    <h2 class="title">You're a master of your Zelda desitny! You have finished your quest! You have earned ${score} hearts!</h2>
+    <br><img class="tryTheForce" src="images/link2.gif">
+    <button id="restart">Restart!</button>
+    </section>`;
+    $('.container').append(betterFinish);
+    $('#questNumb').text(QUESTIONS.length); // Should prevent from displaying more questions than there are. 
+    console.log('`betterScore` ran and is now showing the final score.');
+    hanldeRestart();
 }
 
 function normScore() {
     // Responsible for display a normal reward screen for scores 4-7
+    let normFinish = `<section class="subContainer">
+    <h2 class="title">Congratulations! You have finished your quest! You have earned ${score} hearts!</h2>
+    <br><img class="tryTheForce" src="images/.jpg">
+    <button id="restart">Restart!</button>
+    </section>`;
+    $('.container').append(normFinish);
+    $('#questNumb').text(QUESTIONS.length); // Should prevent from displaying more questions than there are. 
+    console.log('`normScore` ran and is now showing the final score.');
+    hanldeRestart();
 }
 
 function badScore() {
@@ -201,15 +236,13 @@ let betterFinish = `<section class="subContainer">
     </section>`;
     $('.container').append(betterFinish);
     $('#questNumb').text(QUESTIONS.length); // Should prevent from displaying more questions than there are. 
-    console.log('`handleFinish` ran and is now showing the final score.');
+    console.log('`badScore` ran and is now showing the final score.');
     hanldeRestart();
-
 }
 
 function allMother() {
     // function stores all other function calls.
     handleBegin();
-    
 }
 
 allMother();

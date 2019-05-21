@@ -97,6 +97,11 @@ ul {
     padding: 10px;
 }
 
+.perfect {
+    height: 300px;
+    width: 300px;
+}
+
 .plusHeart {
     height: 300px;
     width: 400px;

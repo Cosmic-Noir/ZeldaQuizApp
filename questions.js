@@ -64,9 +64,9 @@ let QUESTIONS = [
             "Eternity's Edge",
             "The Sword of Time",
             "Demon's Bane",
-            "The Master Blade"
+            "The Master Sword"
         ],
-        correct: "The Master Blade"
+        correct: "The Master Sword"
     },
     {
         question: "What is the name of the main villain?",
