@@ -4,49 +4,49 @@ let QUESTIONS = [
     {
         question: "Who is Zelda?",
         answers: [
-            "The young hero dressed in green.",
-            "The Princess of Hyrule.",
-            "The fairy queen.",
-            "The evil demon king."],
-        correct: "The Princess of Hyrule."
+            "The young hero dressed in green",
+            "The Princess of Hyrule",
+            "The fairy queen",
+            "The evil demon king"],
+        correct: "The Princess of Hyrule"
     }, 
     {
         question: "When was Ocarina of Time originally released?",
         answers: [
-            "October, 1993.",
-            "December, 1999.",
-            "November, 1998.",
-            "December, 2003."],
-        correct: "November, 1998."
+            "October, 1993",
+            "December, 1999",
+            "November, 1998",
+            "December, 2003"],
+        correct: "November, 1998"
     },
     {
         question: "What console was the title released on?",
         answers: [
-            "Nintendo 64.",
-            "playstaion.",
-            "Super Nintendo.",
-            "Dreamcast."],
-        correct: "Nintendo 64."
+            "Nintendo 64",
+            "playstaion",
+            "Super Nintendo",
+            "Dreamcast"],
+        correct: "Nintendo 64"
     },
     {
         question: "What is the name of the main character?",
         answers: [
-            "Zelda.",
-            "Saori.",
-            "Epona.",
-            "Link."
+            "Zelda",
+            "Saori",
+            "Epona",
+            "Link"
         ],
-        correct: "Link."
+        correct: "Link"
     },
     {
         question: "What is the name of hero's fairy?",
         answers: [
-            "Navi.",
-            "Epona.",
-            "Theo.",
-            "Malta."
+            "Navi",
+            "Epona",
+            "Theo",
+            "Malta"
         ],
-        correct: "Navi."
+        correct: "Navi"
     },
     {
         question: "What is the name of ther hero's horse?",
@@ -56,7 +56,7 @@ let QUESTIONS = [
             "Epona",
             "Malon"
         ],
-        correct: "Epona."
+        correct: "Epona"
     },
     {
         question: "What is the blade weilded by the hero?",

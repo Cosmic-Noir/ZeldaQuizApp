@@ -30,6 +30,7 @@ function renderQuestion() {
     $('.container').append(newSection);
     console.log('`renderQuestion` ran and created a new question.');
     handleSubmit();
+    displayChicken()
     } else {
         console.log('`renderQuestion` rand and there were no more questions. Finishing quiz...');
         handleFinish();
@@ -95,6 +96,7 @@ function handleWrong() {
 function displayWrong() {
     let wrongDisplay = `<section class="subContainer">
     <h2 class="title">Sadness... A failure. But you must go on!!</h2>
+    <img class="fail" src="images/heyListen.jpg">
     <button id="next">Next!</button>
     <h3>The correct answer was:</h3>
     <h4>${QUESTIONS[questionIndex].correct}<h4>
@@ -109,7 +111,7 @@ function displayCorrect(){
     // function displays the correct answer if the user picked the correct answer. 
     let correctDisplay = `<section class="subContainer">
     <h2 class="title">Congratulations! You've gained a heart for your wisdom!</h2>
-    <img class="plusHeart" src="images/plusHeart.gif">
+    <img class="plusHeart" src="images/linkZelda1.gif">
     <button id="next">Next!</button>
     </section>`;
     $('.container').append(correctDisplay);
@@ -172,7 +174,37 @@ function hanldeRestart() {
     })
 }
 
+function displayChicken() {
+    // Responsible for adding the chicken image in the last question.
+    if (questionIndex === 9) {
+        let imageElement = `<br><img class="chicken" src="images/chicken.gif">`;
+        $('.title').append(imageElement);
+        console.log("`displayChicken` ran and should have added a chicken.gif on the last question.");
+    }
+   
+}
 
+function perfectScore() {
+    // Responsible for displaying screen for perfect score
+}
+
+function normScore() {
+    // Responsible for display a normal reward screen for scores 4-7
+}
+
+function badScore() {
+// Responsible for displaying a not so great screen with score of 3 or lower
+let betterFinish = `<section class="subContainer">
+    <h2 class="title">Sadly, you lack enough hearts to defeat the boss! Alas, you earned ${score} hearts.</h2>
+    <br><img class="tryTheForce" src="images/tryTheForce.jpg">
+    <button id="restart">Restart!</button>
+    </section>`;
+    $('.container').append(betterFinish);
+    $('#questNumb').text(QUESTIONS.length); // Should prevent from displaying more questions than there are. 
+    console.log('`handleFinish` ran and is now showing the final score.');
+    hanldeRestart();
+
+}
 
 function allMother() {
     // function stores all other function calls.
