@@ -80,6 +80,11 @@ ul {
     padding: 10px;
 }
 
+.plusHeart {
+    height: 240px;
+    width: 300px;
+}
+
 .styled {
     background: hsla(51, 65%, 65%, 0.623);
     box-shadow: 4px 4px hsla(50, 34%, 87%, 0.65);

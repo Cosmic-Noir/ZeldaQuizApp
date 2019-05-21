@@ -104,10 +104,12 @@ function displayWrong() {
     console.log('`displayWrong` ran and is showing the correct answer.');
 }
 
+
 function displayCorrect(){
     // function displays the correct answer if the user picked the correct answer. 
     let correctDisplay = `<section class="subContainer">
     <h2 class="title">Congratulations! You've gained a heart for your wisdom!</h2>
+    <img class="plusHeart" src="images/plusHeart.gif">
     <button id="next">Next!</button>
     </section>`;
     $('.container').append(correctDisplay);
