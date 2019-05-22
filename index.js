@@ -18,9 +18,8 @@ function renderQuestion() {
     // This function will be responsible for rendering the question and adding it to the "question" class section
     if (questionIndex < QUESTIONS.length) {
         let newSection = `<section class="question">
-        <h2 class="title">${QUESTIONS[questionIndex].question}</h2>
         <form>
-            
+        <label class="title">${QUESTIONS[questionIndex].question}</label><br>
             <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[0]}" required checked>${QUESTIONS[questionIndex].answers[0]}<br>
             <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[1]}" required>${QUESTIONS[questionIndex].answers[1]}<br>
             <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[2]}"  required>${QUESTIONS[questionIndex].answers[2]}<br>
@@ -80,7 +79,7 @@ function hanldeQuestNav() {
 function handleCorrect() {
     // function responsible for showing the user selected the correct answer.
     score++;
-    let heartScore = `<img src="images/heart.png" class="heart">`; 
+    let heartScore = `<img src="images/heart.png" class="heart" alt="Heart container score">`; 
     $('#score').append(heartScore);
     console.log('`handleCorrect` ran and the score is now ' + score);
     displayCorrect();
@@ -98,7 +97,7 @@ function handleWrong() {
 function displayWrong() {
     let wrongDisplay = `<section class="subContainer">
     <h2 class="title">Sadness... A failure. But you must go on!!</h2>
-    <img class="fail" src="images/heyListen.jpg">
+    <img class="fail" src="images/heyListen.jpg" alt="'Hey, Listen!' says Navi.">
     <button id="next">Next!</button>
     <h3>The correct answer was:</h3>
     <h4>${QUESTIONS[questionIndex].correct}<h4>
@@ -113,7 +112,7 @@ function displayCorrect(){
     // function displays the correct answer if the user picked the correct answer. 
     let correctDisplay = `<section class="subContainer">
     <h2 class="title">Congratulations! You've gained a heart for your wisdom!</h2>
-    <img class="plusHeart" src="images/linkZelda1.gif">
+    <img class="plusHeart" src="images/linkZelda1.gif" alt="Link showing off his heart container to Zelda.">
     <button id="next">Next!</button>
     </section>`;
     $('.container').append(correctDisplay);
@@ -167,7 +166,7 @@ function hanldeRestart() {
         console.log('restart button pressed, score and questionIndex to 0, and questionDisplay reset to 1.');
         let introSection = `<section class="subContainer intro">
         <h2 class="title">Test your Zelda OoT knowledge of the legend here!</h2>
-        <img src="images/link2.gif" class="plusHeart">
+        <img src="images/link2.gif" class="link" alt="Cute cartoon of Link brandishing a sword.">
         <button id="begin">Begin!</button>
         </section>
         <section class="question subContainer"></section>`;
@@ -183,7 +182,7 @@ function displayChicken() {
     if (questionIndex === 9) {
         let imageElement = `<br><img class="chicken" src="images/chicken.gif">`;
         $('.title').append(imageElement);
-        console.log("`displayChicken` ran and should have added a chicken.gif on the last question.");
+        console.log("`displayChicken` ran and has displayed chicken.gif");
     }
    
 }
