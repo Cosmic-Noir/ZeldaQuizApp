@@ -20,7 +20,8 @@ function renderQuestion() {
         let newSection = `<section class="question">
         <h2 class="title">${QUESTIONS[questionIndex].question}</h2>
         <form>
-            <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[0]}" required>${QUESTIONS[questionIndex].answers[0]}<br>
+            
+            <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[0]}" required checked>${QUESTIONS[questionIndex].answers[0]}<br>
             <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[1]}" required>${QUESTIONS[questionIndex].answers[1]}<br>
             <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[2]}"  required>${QUESTIONS[questionIndex].answers[2]}<br>
             <input type="radio" class="choice" name="choice" value="${QUESTIONS[questionIndex].answers[3]}"  required> ${QUESTIONS[questionIndex].answers[3]}<br>
@@ -189,6 +190,7 @@ function displayChicken() {
 
 function perfectScore() {
     // Responsible for displaying screen for perfect score
+    // Causes color/background to remain after restart, but I like it.
     $('body').css('background-image', 'url("images/triforce.jpg")');
     $('.styled').css('background', 'hsla(301, 65%, 65%, 0.623)');
     let betterFinish = `<section class="subContainer">
