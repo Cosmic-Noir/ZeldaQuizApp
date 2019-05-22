@@ -244,9 +244,6 @@ let betterFinish = `<section class="subContainer">
     hanldeRestart();
 }
 
-function allMother() {
-    // function stores all other function calls.
     handleBegin();
-}
 
-allMother();
+
