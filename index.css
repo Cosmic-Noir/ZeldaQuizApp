@@ -64,6 +64,11 @@ ul {
     padding-bottom: 0px;
 }
 
+.better {
+    width: 200px;
+    height: 300px;
+}
+
 .chicken {
     height: 300px;
     width: 300px;
@@ -100,6 +105,11 @@ ul {
 .heart {
     height: 25px;
     width: 25px;
+}
+
+.link {
+    height: 400px;
+    width: 400px;
 }
 
 .perfect {

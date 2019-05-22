@@ -157,6 +157,7 @@ function hanldeRestart() {
     // function to handle when quiz is over and user wants to click button to restart the quiz. 
     $('#restart').click(function(event){
         event.preventDefault();
+        $('.heart').remove();
         removeSubContainer();
         score = 0;
         questionIndex = 0;
@@ -188,6 +189,8 @@ function displayChicken() {
 
 function perfectScore() {
     // Responsible for displaying screen for perfect score
+    $('body').css('background-image', 'url("images/triforce.jpg")');
+    $('.styled').css('background', 'hsla(301, 65%, 65%, 0.623)');
     let betterFinish = `<section class="subContainer">
     <h2 class="title">You earned the Triforce! Congratulations on your pefect score! You have earned ${score} hearts!</h2>
     <br><img class="perfect" src="images/triforce.gif">
@@ -202,10 +205,10 @@ function perfectScore() {
 
 
 function betterScore() {
-    // Responsible for displaying screen for better score
+    // Responsible for displaying screen for better score 8 or 9
     let betterFinish = `<section class="subContainer">
     <h2 class="title">You're a master of your Zelda desitny! You have finished your quest! You have earned ${score} hearts!</h2>
-    <br><img class="tryTheForce" src="images/link2.gif">
+    <br><img class="link" src="images/link1.gif">
     <button id="restart">Restart!</button>
     </section>`;
     $('.container').append(betterFinish);
