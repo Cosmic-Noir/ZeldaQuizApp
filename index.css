@@ -27,11 +27,11 @@ button {
 
 form {
     padding: 20px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 h5 {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 header {
@@ -59,7 +59,7 @@ ul {
 .banner {
     color: hsla(0, 91%, 50%, 0.9);
     text-shadow: 1px 1px 2px black;
-    font-size: 50px;
+    font-size: 32px;
     padding: 20px;
     padding-bottom: 0px;
 }
@@ -103,13 +103,13 @@ ul {
 }
 
 .heart {
-    height: 25px;
-    width: 25px;
+    height: 16px;
+    width: 16px;
 }
 
 .link {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 
 .perfect {
@@ -137,19 +137,19 @@ ul {
 .subTitle {
     color: hsla(234, 91%, 50%, 0.9);
     text-shadow: 1px 1px 2px black;
-    font-size: 40px;
-    padding: 20px;
+    font-size: 22px;
+    padding: 15px;
     padding-bottom: 0px;
 }
 
 .title {
-    font-size: 40px;
+    font-size: 22px;
     text-shadow: 1px 1px 2px white;
 }
 
 .track {
     padding: 10px;
-    font-size: 30px;
+    font-size: 16px;
 }
 
 .triforce {

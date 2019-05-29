@@ -164,7 +164,7 @@ function hanldeRestart() {
         questionDisplay = 1;
         $('#questNumb').text(0);
         console.log('restart button pressed, score and questionIndex to 0, and questionDisplay reset to 1.');
-        let introSection = `<section class="subContainer intro">
+        const introSection = `<section class="subContainer intro">
         <h2 class="title">Test your Zelda OoT knowledge of the legend here!</h2>
         <img src="images/link2.gif" class="link" alt="Cute cartoon of Link brandishing a sword.">
         <button id="begin">Begin!</button>
