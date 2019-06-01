@@ -59,7 +59,7 @@ ul {
 .banner {
     color: hsla(0, 91%, 50%, 0.9);
     text-shadow: 1px 1px 2px black;
-    font-size: 32px;
+    font-size: 22px;
     padding: 20px;
     padding-bottom: 0px;
 }
@@ -108,18 +108,13 @@ ul {
 }
 
 .link {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
 }
 
-.perfect {
-    height: 300px;
+.resultPic {
+    height: 175px;
     width: 300px;
-}
-
-.plusHeart {
-    height: 300px;
-    width: 400px;
 }
 
 .styled {
@@ -148,14 +143,13 @@ ul {
 }
 
 .track {
-    padding: 10px;
+    padding: 5px;
     font-size: 16px;
 }
 
 .triforce {
-    height: 150px;
-    width: 200px;
-    padding: 5px;
+    height: 75px;
+    width: 100px;
 }
 
 .question {
@@ -167,8 +161,46 @@ ul {
 /* Ids alpahbetized */
 
 @media screen and (min-width: 700px) {
+    .banner {
+        font-size: 36px;
+    }
+
+    .heart {
+        height: 20px;
+        width: 20px;
+    }
+
+    .link {
+        height: 300px;
+        width: 300px;
+    }
+
+    .resultPic {
+        height: 300px;
+        width: 400px;
+    }
+
+    .subTitle {
+        font-size: 30px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .track {
+        padding: 5px;
+        font-size: 20px;
+    }
+
     .tracking {
         display: flex;
         flex-direction: row;
     }
+
+    .triforce {
+        height: 150px;
+        width: 200px;
+    }
+
 }

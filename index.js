@@ -97,7 +97,7 @@ function handleWrong() {
 function displayWrong() {
     let wrongDisplay = `<section class="subContainer">
     <h2 class="title">Sadness... A failure. But you must go on!!</h2>
-    <img class="fail" src="images/heyListen.jpg" alt="'Hey, Listen!' says Navi.">
+    <img class="link" src="images/heyListen.jpg" alt="'Hey, Listen!' says Navi.">
     <button id="next">Next!</button>
     <h3>The correct answer was:</h3>
     <h4>${QUESTIONS[questionIndex].correct}<h4>
@@ -180,7 +180,7 @@ function hanldeRestart() {
 function displayChicken() {
     // Responsible for adding the chicken image in the last question.
     if (questionIndex === 9) {
-        let imageElement = `<br><img class="chicken" src="images/chicken.gif">`;
+        let imageElement = `<br><img class="link" src="images/chicken.gif">`;
         $('.title').append(imageElement);
         console.log("`displayChicken` ran and has displayed chicken.gif");
     }
@@ -194,7 +194,7 @@ function perfectScore() {
     $('.styled').css('background', 'hsla(301, 65%, 65%, 0.623)');
     let betterFinish = `<section class="subContainer">
     <h2 class="title">You earned the Triforce! Congratulations on your pefect score! You have earned ${score} hearts!</h2>
-    <br><img class="perfect" src="images/triforce.gif">
+    <br><img class="link" src="images/triforce.gif">
     <button id="restart">Restart!</button>
     </section>`;
     $('.container').append(betterFinish);
@@ -222,7 +222,7 @@ function normScore() {
     // Responsible for display a normal reward screen for scores 4-7
     let normFinish = `<section class="subContainer">
     <h2 class="title">Congratulations! You have finished your quest! You have earned ${score} hearts!</h2>
-    <br><img class="tryTheForce" src="images/zelda1.gif">
+    <br><img class="link" src="images/zelda1.gif">
     <button id="restart">Restart!</button>
     </section>`;
     $('.container').append(normFinish);
@@ -235,7 +235,7 @@ function badScore() {
 // Responsible for displaying a not so great screen with score of 3 or lower
 let betterFinish = `<section class="subContainer">
     <h2 class="title">Sadly, you lack enough hearts to defeat the boss! Alas, you earned ${score} hearts.</h2>
-    <br><img class="tryTheForce" src="images/tryTheForce.jpg">
+    <br><img class="link" src="images/tryTheForce.jpg">
     <button id="restart">Restart!</button>
     </section>`;
     $('.container').append(betterFinish);
