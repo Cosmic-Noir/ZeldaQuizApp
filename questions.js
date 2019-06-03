@@ -23,7 +23,7 @@ let QUESTIONS = [
         question: "What console was the title released on?",
         answers: [
             "Nintendo 64",
-            "playstaion",
+            "Playstation",
             "Super Nintendo",
             "Dreamcast"],
         correct: "Nintendo 64"
